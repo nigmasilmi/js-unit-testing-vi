@@ -55,3 +55,16 @@ vi.mock("path", () => {
 - whenever mock is called, the test runner will look for that folder
 - if it does not find one, will behave as default by replacing all methods with empty functions
 - if it does find one, will look for the specific module (fs in our case), and if it finds the module that is instructed to mock, will replace its implementation with the one that is been implemented in the **mocks**/<module> file
+
+## mockImplementation() // mockImplementationOnce()
+
+- it is used to mock a specific implementation in a specific test
+- it is used on a mocked function
+- accepts a function that should be used as the implamentation of the mock
+
+```
+// replaces the function that is empty (vi.fn() with a specific implementation)
+ const logger = vi.fn();
+ logger.mockImplementation(()=>{//some specific implementation})
+
+```
