@@ -18,7 +18,7 @@ it("should execute the write file method", () => {
   const testFilename = "test.txt";
   writeData(testData, testFilename);
   //   return to wait that the test runner waits for it to finish
-  // return expect(writeData(testData, testFilename)).resolves.toBeUndefined();
+  return expect(writeData(testData, testFilename)).resolves.toBeUndefined();
   //   expect(fs.writeFile).toBeCalled();
-  expect(fs.writeFile).toBeCalledWith(testFilename, testData);
+  //expect(fs.writeFile).toBeCalledWith(testFilename, testData);
 });

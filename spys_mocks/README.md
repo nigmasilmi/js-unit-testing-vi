@@ -50,6 +50,8 @@ vi.mock("path", () => {
 });
 ```
 
-## centralizing **mocks**
+## Centralizing **mocks**
 
-whenever mock is called, the test runner will look for that file
+- whenever mock is called, the test runner will look for that folder
+- if it does not find one, will behave as default by replacing all methods with empty functions
+- if it does find one, will look for the specific module (fs in our case), and if it finds the module that is instructed to mock, will replace its implementation with the one that is been implemented in the **mocks**/<module> file
