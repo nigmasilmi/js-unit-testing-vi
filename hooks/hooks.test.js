@@ -22,6 +22,7 @@ afterEach(() => {
   user = new User(testEmail);
 });
 
+// describe.concurrent
 it.concurrent("should update the email", () => {
   const newTestEmail = "test2@test.com";
 
